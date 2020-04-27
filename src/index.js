@@ -5,7 +5,7 @@ import { crearTodoHtml } from './js/componentes';
 
 export const todoList = new TodoList();
 
-//todoList.todos.forEach( todo2 => crearTodoHtml( todo2 ) );
-todoList.todos.forEach( crearTodoHtml );
+todoList.todos.forEach( todo2 => crearTodoHtml( todo2 ) );
+//todoList.todos.forEach( crearTodoHtml );
 
 console.log( 'todos', todoList.todos );
