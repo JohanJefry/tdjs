@@ -19,7 +19,7 @@ export const crearTodoHtml = ( todo ) =>{
             <button class="destroy"></button>
         </div>
         <input class="edit" value="Create a TodoMVC template">
-    </li>` 
+    </li>`; 
     
     const div = document.createElement('div');
     div.innerHTML = htmlTodo;
@@ -29,7 +29,7 @@ export const crearTodoHtml = ( todo ) =>{
     //contador
      //console.log(count.firstChild.innerHTML);
      if (!todo.completado) {
-         count.firstChild.innerHTML++; 
+         count.firstChild.innerText++; 
      }
       
     //
@@ -64,15 +64,15 @@ divTodoList.addEventListener('click',(event) =>{
         todoList.marcarCompletado( todoId );
         todoElemento.classList.toggle('completed')
         if (todoElemento.classList.contains('completed')) {
-            count.firstChild.innerHTML--; 
+            count.firstChild.innerText--; 
         }else {
-            count.firstChild.innerHTML++; 
+            count.firstChild.innerText++; 
         }
     }else if (nombreElemento.includes('button')) {//boton x
         todoList.eliminarTodo( todoId );
         divTodoList.removeChild( todoElemento );    
         if (!todoElemento.classList.contains('completed')) {
-            count.firstChild.innerHTML--; 
+            count.firstChild.innerText--; 
         }    
     }
     
